@@ -140,13 +140,12 @@
   width: 1440px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .movie-poster p {
   font-weight: 700;
   margin-top: 30px;
+  width: 200px;
 }
 
 .movie-poster span {
