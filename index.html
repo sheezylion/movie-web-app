@@ -1,14 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="script" href="script.js">
-  <title>Movie web application</title>
-</head>
-<body>
-  
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Movie web application</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="movie-container">
+        <div class="poster-header">
+          <div class="search-box">
+            <img src="images/tv.jpg" alt="tv logo" /> <span>MovieBox</span>
+            <input type="text" placeholder="What do you want to watch?" />
+            <p><a href="#">Sign in</a></p>
+          </div>
+          <div class="john-wick">
+            <div class="jw-header">
+              <h1>John Wick 3 : <br />Parabellum</h1>
+            </div>
+            <div class="ratings">
+              <img
+                src="images/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.jpg"
+                alt="logo"
+              /><span>86.0/100</span>
+              <img
+                src="images/PngItem_1381056 1.jpg"
+                alt="apple-logo"
+                class="radius"
+              /><span>97%</span>
+            </div>
+            <div class="sub-heading">
+              <p>
+                John Wick is on the run after killing a member of the
+                international assassins' guild, and with a $14 million price tag
+                on his head, he is the target of hit men and women everywhere.
+              </p>
+            </div>
+            <div class="trailer">
+              <p>Watch trailer</p>
+            </div>
+          </div>
+        </div>
+        <div class="fatured-movie">
+          <div class="featured-header">
+            <h3>Featured Movie</h3>
+            <p>See more</p>
+          </div>
+          <div class="movie-poster">
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Stranger Things</p>
+              <span data-testid: movie-release-date>USA, 2016 - Current</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Batman Begins</p>
+              <span data-testid: movie-release-date>USA 2005</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Spider-Man : Into The Spider Verse</p>
+              <span data-testid: movie-release-date>USA 2018</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Dunkirk</p>
+              <span data-testid: movie-release-date>USA 2017</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Dune</p>
+              <span data-testid: movie-release-date>USA 2021</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>No Time To Die</p>
+              <span data-testid: movie-release-date>USA 2021</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>
+                Shang-Chi and the Legend of the Ten Rings
+              </p>
+              <span data-testid: movie-release-date>USA 2021</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Don't breathe 2</p>
+              <span data-testid: movie-release-date>USA 2021</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>Dune</p>
+              <span data-testid: movie-release-date>USA 2021</span>
+            </div>
+            <div data-testid:movie-card>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+                width="250px"
+                height="370px"
+                data-testid:
+                movie-poster
+              />
+              <p data-testid: movie-title>No Time To Die</p>
+              <span data-testid: movie-release-date>USA 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
 </html>
