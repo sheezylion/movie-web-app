@@ -68,7 +68,7 @@
 }
 
 .john-wick {
-  ppadding-top: 20px;
+  padding-top: 20px;
   padding-left: 60px;
   width: 400px;
 }
@@ -151,4 +151,109 @@
 .movie-poster span {
   font-weight: 200;
   font-size: small;
+}
+
+.footer-container {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.policy {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.policy .conditions {
+  margin-right: 100px;
+}
+
+.policy .privacy {
+  margin-right: 100px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+/* mobile responsiveness */
+@media screen and (max-width: 375px) {
+  .movie-container {
+    width: 90%;
+    margin: 1.5rem;
+  }
+
+  .poster-header {
+    width: 1400px;
+  }
+
+  .footer-container {
+    margin-top: 100px;
+    display: flex;
+    margin-left: 700px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .movie-container {
+    width: 90%;
+    margin: 1.5rem;
+  }
+
+  .poster-header {
+    width: 1400px;
+  }
+
+  .footer-container {
+    margin-top: 100px;
+    display: flex;
+    margin-left: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-container {
+    width: 90%;
+    margin: 1.5rem;
+  }
+
+  .poster-header {
+    width: 1400px;
+  }
+
+  .footer-container {
+    margin-top: 100px;
+    display: flex;
+    margin-left: 700px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .movie-container {
+    width: 90%;
+    margin: 1.5rem;
+  }
+
+  .poster-header {
+    width: 1400px;
+  }
+
+  .footer-container {
+    margin-top: 100px;
+    display: flex;
+    margin-left: 700px;
+  }
 }
