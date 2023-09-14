@@ -9,6 +9,7 @@ const option = {
 };
 
 let topRatedMovies = {};
+let moviesSearched = {};
 
 fetch("https://api.themoviedb.org/3/movie/top_rated", option)
   .then((response) => response.json())
@@ -20,3 +21,9 @@ fetch("https://api.themoviedb.org/3/movie/top_rated", option)
   .catch((e) => {
     console.log(e);
   });
+
+// map through the movies and create elements in the movie grid
+
+
+// listen to the search input and make api call to search endpoint when user types
+//fetch the search result, loop through the results and populate the grid with movie
