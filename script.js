@@ -142,3 +142,15 @@ searchInput.addEventListener("input",(e)=>{
     console.log('value',value);
     searchMovies(value);
 })
+
+
+/*
+* fetch the now playing results
+*  once you get the result
+*  pick the first item
+*  query the html to get the header using the id
+*  const header = document.getElementById('posterHeader");
+*  set the background to the url on the backdrop of the first element
+*  header.setAttribute("background","url(backdrop_path)");
+*
+* */
