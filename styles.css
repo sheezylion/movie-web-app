@@ -265,4 +265,10 @@
   .search-box > .link{
     display: flex;
   }
+
+  .jw-header {
+    width:70%;
+    font-size:20px;
+    margin:3rem 0 10px;
+  }
 }
