@@ -21,13 +21,13 @@
               <div class='logo'><img src="images/tv.jpg" alt="tv logo" /> <span>MovieBox</span></div>
               <p class='link'><a href="#">Sign in</a></p>
             </div>
-            <input type="text" class="search-input" placeholder="What do you want to watch?" />
+            <input type="text" class="search-input" id="searchInput" placeholder="What do you want to watch?" />
             <p class='link'><a href="#">Sign in</a></p>
           </div>
           <div class="john-wick">
             <div class="jw-header">
               <h1>John Wick 3 Parabellum </h1>
-            
+
             </div>
             <div class="ratings">
               <img
@@ -57,112 +57,115 @@
             <h3>Featured Movie</h3>
             <p>See more</p>
           </div>
-          <div class="movie-poster">
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
-
-
-                data-testid="movie-poster"
-              />
-              <p data-testid="movie-title">Stranger Things</p>
-              <span data-testid="movie-release-date">USA, 2016 - Current</span>
+          <div class="movie-poster" id="movie-poster">
+            <div id="grid-loader">
+              <div class='loader'></div>
             </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid="movie-poster"
-              />
-              <p data-testid="movie-title">Batman Begins</p>
-              <span data-testid="movie-release-date">USA 2005</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
-                data-testid="movie-poster"
-              />
-              <p data-testid="movie-title">Spider-Man : Into The Spider Verse</p>
-              <span data-testid="movie-release-date">USA 2018</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid="movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Stranger Things</p>-->
+<!--              <span data-testid="movie-release-date">USA, 2016 - Current</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid="movie-poster"
-              />
-              <p data-testid="movie-title">Dunkirk</p>
-              <span data-testid="movie-release-date">USA 2017</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid="movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Batman Begins</p>-->
+<!--              <span data-testid="movie-release-date">USA 2005</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
+<!--                data-testid="movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Spider-Man : Into The Spider Verse</p>-->
+<!--              <span data-testid="movie-release-date">USA 2018</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid="movie-poster"
-              />
-              <p data-testid="movie-title">Dune</p>
-              <span data-testid="movie-release-date">USA 2021</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid="movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Dunkirk</p>-->
+<!--              <span data-testid="movie-release-date">USA 2017</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid=
-                "movie-poster"
-              />
-              <p data-testid="movie-title">No Time To Die</p>
-              <span data-testid="movie-release-date">USA 2021</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid="movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Dune</p>-->
+<!--              <span data-testid="movie-release-date">USA 2021</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid=
-                "movie-poster"
-              />
-              <p data-testid="movie-title">
-                Shang-Chi and the Legend of the Ten Rings
-              </p>
-              <span data-testid="movie-release-date">USA 2021</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid=-->
+<!--                "movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">No Time To Die</p>-->
+<!--              <span data-testid="movie-release-date">USA 2021</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid=
-                "movie-poster"
-              />
-              <p data-testid="movie-title">Don't breathe 2</p>
-              <span data-testid="movie-release-date">USA 2021</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid=-->
+<!--                "movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">-->
+<!--                Shang-Chi and the Legend of the Ten Rings-->
+<!--              </p>-->
+<!--              <span data-testid="movie-release-date">USA 2021</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid=
-                "movie-poster"
-              />
-              <p data-testid="movie-title">Dune</p>
-              <span data-testid="movie-release-date">USA 2021</span>
-            </div>
-            <div data-testid="movie-card" class="movie-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"
+<!--                data-testid=-->
+<!--                "movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Don't breathe 2</p>-->
+<!--              <span data-testid="movie-release-date">USA 2021</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
 
 
-                data-testid=
-                "movie-poster"
-              />
-              <p data-testid="movie-title">No Time To Die</p>
-              <span data-testid="movie-release-date">USA 2021</span>
-            </div>
+<!--                data-testid=-->
+<!--                "movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">Dune</p>-->
+<!--              <span data-testid="movie-release-date">USA 2021</span>-->
+<!--            </div>-->
+<!--            <div data-testid="movie-card" class="movie-card">-->
+<!--              <img-->
+<!--                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"-->
+
+
+<!--                data-testid=-->
+<!--                "movie-poster"-->
+<!--              />-->
+<!--              <p data-testid="movie-title">No Time To Die</p>-->
+<!--              <span data-testid="movie-release-date">USA 2021</span>-->
+<!--            </div>-->
           </div>
         </div>
         <div class="footer-container">
@@ -204,6 +207,9 @@
           </footer>
         </div>
       </div>
+    </div>
+    <div class="loader-container" id="loader">
+      <div class="loader"></div>
     </div>
   </body>
 
