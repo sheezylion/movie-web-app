@@ -26,8 +26,6 @@ const config = {
             },
         }
 }
-let moviesSearched = {};
-let loader = document.getElementById('loader');
 // requests
 const getMovies = () => {
     /*
@@ -38,6 +36,7 @@ const getMovies = () => {
     *  then append the movie cards to the movie grid
     *
     * */
+    let loader = document.getElementById('loader');
     loader.setAttribute('style',"display:flex");
     fetch("https://api.themoviedb.org/3/movie/top_rated", config.options)
         .then((response) => response.json())
@@ -52,7 +51,8 @@ const getMovies = () => {
         });
 
 }
-const searchMovies = (value) => {
+
+const getHeader = () => {
     /*
     *  show the loader
     *  make request to get the top rated movies
@@ -61,29 +61,57 @@ const searchMovies = (value) => {
     *  then append the movie cards to the movie grid
     *
     * */
-    /*
-    *
-    *      --url 'god%20father%20' \
-
-    * */
-    const gridLoader = document.getElementById('grid-loader')
-    gridLoader.setAttribute('style',"display:flex");
-    fetch(`https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=false&language=en-US&page=1`, config.options)
+    const header = document.getElementById("posterHeader");
+    const headerTitle = document.getElementById("header-title");
+    const headerDesc = document.getElementById("header-description");
+    const headerRating = document.getElementById("header-rating");
+    const headerPercentage = document.getElementById("header-rating-percentage");
+    const headerLink = document.getElementById("header-link");
+    // let loader = document.getElementById('loader');
+    // loader.setAttribute('style',"display:flex");
+    fetch('https://api.themoviedb.org/3/movie/603692?language=en-US', config.options)
         .then((response) => response.json())
-        .then((response) => {
-            console.log(response);
-            gridLoader.setAttribute('style',"display:none");
-            normalizeMovies(response?.results);
+        .then((movie) => {
+            console.log("header",movie);
+            // loader.setAttribute('style',"display:none");
+            if (movie){
+                console.log('movie',movie)
+                headerTitle.textContent = movie.title;
+                headerDesc.textContent = movie.overview;
+                headerRating.textContent = `${Number(movie.vote_average).toFixed(2)}/10`;
+                headerPercentage.textContent= `${Number(movie.vote_average/10) * 100}%`;
+                header.setAttribute("style",`background-image:url("${[config.imgBaseUrl,config.backdrop_sizes[3],movie.backdrop_path].join('')}")`)
+                headerLink.setAttribute("href",movie.homepage)
+            }
+
         })
         .catch((e) => {
-            gridLoader.setAttribute('style',"display:none");
+            // loader.setAttribute('style',"display:none");
             console.log(e);
         });
+
 }
 
-getMovies();
+const searchMovies = (value) => {
+    if(value){
+        return getSearchedMovies(value);
+    }else {
+        return getMovies();
+    }
+}
 
 
+const getSearchedMovies = (value)=>{
+    const loader = document.createElement('div');
+    const roller = document.createElement('div');
+    const posterGrid = document.getElementById('movie-poster');
+    loader.setAttribute('id','grid-loader');
+    roller.setAttribute('class','loader');
+    loader.appendChild(roller);
+    posterGrid.appendChild(loader)
+    loader.setAttribute('style',"display:flex");
+    return fetch(`https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=false&language=en-US&page=1`, config.options);
+}
 // map through the movies and create elements in the movie grid
 /*
 <div data-testid="movie-card" class="movie-card">
@@ -101,6 +129,7 @@ getMovies();
 
 const normalizeMovies = (movies)=>{
     const movieGrid = document.getElementById("movie-poster");
+    movieGrid.innerHTML = "";
     if(movies?.length){
         movies.map((m)=>{
             const movieCard = document.createElement('div');
@@ -132,18 +161,37 @@ const normalizeMovies = (movies)=>{
 
 
 
-
-
 // listen to the search input and make api call to search endpoint when user types
 //fetch the search result, loop through the results and populate the grid with movie
- const searchInput = document.getElementById('searchInput');
-searchInput.addEventListener("input",(e)=>{
-    const value = e.target.value;
-    console.log('value',value);
-    searchMovies(value);
-})
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    let searchResponse;
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener("input",(e)=>{
+        const value = e.target.value;
+        const gridLoader = document.getElementById('grid-loader');
+        // gridLoader.setAttribute('style',"display:flex");
+        searchMovies(value).then((response) => response.json())
+            .then((response) => {
+                console.log("search",response);
+                gridLoader.setAttribute('style',"display:none");
+                normalizeMovies(response?.results);
+            })
+            .catch((e) => {
+                gridLoader.setAttribute('style',"display:none");
+                console.log(e);
+            });
+    })
 
 
+}, false);
+
+
+
+
+getMovies()
+getHeader();
 /*
 * fetch the now playing results
 *  once you get the result
